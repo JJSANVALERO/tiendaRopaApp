@@ -131,7 +131,7 @@ public class RopaAdapter extends RecyclerView.Adapter<RopaAdapter.RopaHolder>
                 .setTitle(R.string.remove_ropa_message)
                 .setPositiveButton(R.string.yes, ((dialog, id) -> {
                     Ropa ropa = listaRopa.get(position);
-                    deleteRopaPresenter.deleteArticulo(ropa.getIdArticulo());
+                    deleteRopaPresenter.deleteArticulo(ropa.getIdRopa());
 
                     listaRopa.remove(position);
                     notifyItemRemoved(position);

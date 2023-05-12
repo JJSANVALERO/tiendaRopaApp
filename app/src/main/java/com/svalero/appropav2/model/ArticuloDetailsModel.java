@@ -12,9 +12,9 @@ import retrofit2.Response;
 public class ArticuloDetailsModel implements ArticuloDetailsContract.Model {
 
     @Override
-    public void loadArticulo(ArticuloDetailsContract.Model.OnDetailArticuloListener listener, long idArticulo) {
+    public void loadArticulo(ArticuloDetailsContract.Model.OnDetailArticuloListener listener, long idRopa) {
         AppRopaApiInterface appRopaApiInterface = AppRopaApi.buildInstance();
-        Call<Ropa> callArticulo = appRopaApiInterface.getArticulo(idArticulo);
+        Call<Ropa> callArticulo = appRopaApiInterface.getArticulo(idRopa);
         callArticulo.enqueue(new Callback<Ropa>() {
             @Override
             public void onResponse(Call<Ropa> call, Response<Ropa> response) {

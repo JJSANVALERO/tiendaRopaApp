@@ -9,7 +9,7 @@ public interface ModifyArticuloContract {
             void onModifyArticuloSuccess(Ropa ropa);
             void onModifyArticuloError(String message);
         }
-        void modifyArticulo (Ropa ropa, OnModifyArticuloListener listener, long idArticulo);
+        void modifyArticulo (Ropa ropa, OnModifyArticuloListener listener, long idRopa);
     }
 
     interface View {
@@ -20,6 +20,6 @@ public interface ModifyArticuloContract {
     }
 
     interface Presenter {
-        void modifyArticulo(Ropa ropa, long idArticulo);
+        void modifyArticulo(Ropa ropa, long idRopa);
     }
 }

@@ -54,7 +54,7 @@ public class ArticulosListModel implements ArticulosListContract.Model {
     }
 
     @Override
-    public Ropa getById(long idArticulo) {
+    public Ropa getById(long idRopa) {
         return null;
     }
 

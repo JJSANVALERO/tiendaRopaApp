@@ -15,8 +15,8 @@ public class ModifyArticuloPresenter implements ModifyArticuloContract.Presenter
     }
 
     @Override
-    public void modifyArticulo(Ropa ropa, long idArticulo) {
-        model.modifyArticulo(ropa, this,idArticulo);
+    public void modifyArticulo(Ropa ropa, long idRopa) {
+        model.modifyArticulo(ropa, this,idRopa);
     }
 
     @Override

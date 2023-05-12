@@ -22,7 +22,7 @@ public class ArticuloDetailsView extends AppCompatActivity implements ArticuloDe
 
     private ArticuloDetailsContract.Presenter presenter;
     private ModifyArticuloContract.Presenter modifyPresenter;
-    private long idArticulo;
+    private long idRopa;
     private Ropa loadedArticulo;
 
     @Override
@@ -39,13 +39,13 @@ public class ArticuloDetailsView extends AppCompatActivity implements ArticuloDe
         String password = preferences.getString("password", "");
 
         Intent intent = getIntent();
-        idArticulo = intent.getLongExtra("idArticulo", 0);
+        idRopa = intent.getLongExtra("idRopa", 0);
 
-        Toast.makeText(this, "Received idArticulo: " + idArticulo, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Received idRopa: " + idRopa, Toast.LENGTH_SHORT).show();
 
-        Log.d("ArticuloDetailsView", "idArticulo: " + idArticulo);
+        Log.d("ArticuloDetailsView", "idRopa: " + idRopa);
 
-        presenter.loadArticulo(idArticulo);
+        presenter.loadArticulo(idRopa);
     }
 
 
@@ -54,8 +54,8 @@ public class ArticuloDetailsView extends AppCompatActivity implements ArticuloDe
 
         Intent intent = getIntent();
 
-        idArticulo = intent.getLongExtra("idArticulo",0);
-        if (idArticulo == 0) {
+        idRopa = intent.getLongExtra("idRopa",0);
+        if (idRopa == 0) {
             return;
         }
 
@@ -76,7 +76,7 @@ public class ArticuloDetailsView extends AppCompatActivity implements ArticuloDe
         updatedArticulo.setHayStock(hasStockField.getText().toString().isEmpty());
 
 
-        modifyPresenter.modifyArticulo(updatedArticulo, idArticulo);
+        modifyPresenter.modifyArticulo(updatedArticulo, idRopa);
     }
 
 

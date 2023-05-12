@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey;
 public class Ropa {
 
     @PrimaryKey(autoGenerate = true)
-    private long idArticulo;
+    private long idRopa;
     @ColumnInfo
     private String nombre;
     @ColumnInfo
@@ -32,12 +32,12 @@ public class Ropa {
         this.hayStock = hayStock;
     }
 
-    public long getIdArticulo() {
-        return idArticulo;
+    public long getIdRopa() {
+        return idRopa;
     }
 
-    public void setIdArticulo(long idArticulo) {
-        this.idArticulo = idArticulo;
+    public void setIdRopa(long idRopa) {
+        this.idRopa = idRopa;
     }
 
     public String getFechaAlta() {

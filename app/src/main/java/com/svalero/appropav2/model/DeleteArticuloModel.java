@@ -13,10 +13,10 @@ import retrofit2.Response;
 public class DeleteArticuloModel implements DeleteArticuloContract.Model {
 
     @Override
-    public void deleteArticulo(long idArticulo, OnDeleteArticuloListener listener) {
+    public void deleteArticulo(long idRopa, OnDeleteArticuloListener listener) {
         try {
             AppRopaApiInterface bestReadApi = AppRopaApi.buildInstance();
-            Call<Void> callArticulos = bestReadApi.deleteArticulo(idArticulo);
+            Call<Void> callArticulos = bestReadApi.deleteArticulo(idRopa);
             callArticulos.enqueue(new Callback<Void>() {
                 @Override
                 public void onResponse(Call<Void> call, Response<Void> response) {

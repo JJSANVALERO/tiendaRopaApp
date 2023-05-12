@@ -7,7 +7,7 @@ public interface DeleteArticuloContract {
             void onDeleteSuccess();
             void onDeleteError(String message);
         }
-        void deleteArticulo(long idArticulo, OnDeleteArticuloListener listener);
+        void deleteArticulo(long idRopa, OnDeleteArticuloListener listener);
     }
 
     interface View {
@@ -16,6 +16,6 @@ public interface DeleteArticuloContract {
     }
 
     interface Presenter {
-        void deleteArticulo(long idArticulo);
+        void deleteArticulo(long idRopa);
     }
 }

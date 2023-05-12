@@ -9,7 +9,7 @@ public interface ArticuloDetailsContract {
             void onDetailArticuloSuccess(Ropa ropa);
             void onDetailArticuloError(String message);
         }
-        void loadArticulo(OnDetailArticuloListener listener, long idArticulo);
+        void loadArticulo(OnDetailArticuloListener listener, long idRopa);
 
     }
 
@@ -21,7 +21,7 @@ public interface ArticuloDetailsContract {
     }
 
     interface Presenter {
-        void loadArticulo(long idArticulo);
+        void loadArticulo(long idRopa);
     }
 
 

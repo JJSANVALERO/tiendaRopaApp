@@ -11,9 +11,9 @@ import retrofit2.Response;
 
 public class ModifyArticuloModel implements ModifyArticuloContract.Model {
     @Override
-    public void modifyArticulo(Ropa ropa, OnModifyArticuloListener listener, long idArticulo) {
+    public void modifyArticulo(Ropa ropa, OnModifyArticuloListener listener, long idRopa) {
         AppRopaApiInterface appRopaApiInterface = AppRopaApi.buildInstance();
-        Call<Ropa> callArticulo = appRopaApiInterface.modifyArticulo(idArticulo,  ropa);
+        Call<Ropa> callArticulo = appRopaApiInterface.modifyArticulo(idRopa,  ropa);
         callArticulo.enqueue(new Callback<Ropa>() {
             @Override
             public void onResponse(Call<Ropa> call, Response<Ropa> response) {

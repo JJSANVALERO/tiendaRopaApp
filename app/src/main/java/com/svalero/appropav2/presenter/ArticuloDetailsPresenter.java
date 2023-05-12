@@ -15,8 +15,8 @@ public class ArticuloDetailsPresenter implements ArticuloDetailsContract.Present
     }
 
     @Override
-    public void loadArticulo(long idArticulo) {
-        model.loadArticulo(this, idArticulo);
+    public void loadArticulo(long idRopa) {
+        model.loadArticulo(this, idRopa);
     }
 
     @Override

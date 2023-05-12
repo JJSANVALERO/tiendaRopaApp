@@ -19,8 +19,8 @@ public class DeleteArticuloPresenter implements DeleteArticuloContract.Presenter
     }
 
     @Override
-    public void deleteArticulo(long idArticulo) {
-        model.deleteArticulo(idArticulo, this);
+    public void deleteArticulo(long idRopa) {
+        model.deleteArticulo(idRopa, this);
     }
 
     @Override
